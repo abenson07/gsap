@@ -26,21 +26,21 @@ window.addEventListener('load', function () {
   heroTimeline.to('.homehero-label.middle', {
     opacity: 1,
     duration: 0.3
-  }, .3);
+  }, 1);
 
   //  Move .homeHero-label.top up 100% and set opacity to 70%
   heroTimeline.to('.homehero-label.top', {
     y: '-100%',
     opacity: 0.7,
     duration: 0.5
-  }, .5); // Start at 0s
+  }, 2); // Start at 0s
 
   // Move .homeHero-label.bottom down 100% and set opacity to 20% (simultaneous)
   heroTimeline.to('.homehero-label.bottom', {
     y: '100%',
     opacity: 0.2,
     duration: 0.5
-  }, .7); // Start at 0s
+  }, 3); // Start at 0s
 
   
 
