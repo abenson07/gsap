@@ -15,31 +15,36 @@ window.addEventListener('load', function () {
     }
   });
 
-  // Step 1: Move .homeHero-label.top up 100% and set opacity to 70%
+  // Set .homeHero-name to 0% opacity (starts 0.3s after start)
+  heroTimeline.to('.homehero-name', {
+    opacity: 0,
+    duration: 0.3
+  }, 0);
+
+
+  // Set .homeHero-label.middle to 100% opacity (starts 0.3s after start)
+  heroTimeline.to('.homehero-label.middle', {
+    opacity: 1,
+    duration: 0.3
+  }, .3);
+
+  //  Move .homeHero-label.top up 100% and set opacity to 70%
   heroTimeline.to('.homehero-label.top', {
     y: '-100%',
     opacity: 0.7,
     duration: 0.5
-  }, 0); // Start at 0s
+  }, .5); // Start at 0s
 
-  // Step 2: Move .homeHero-label.bottom down 100% and set opacity to 20% (simultaneous)
+  // Move .homeHero-label.bottom down 100% and set opacity to 20% (simultaneous)
   heroTimeline.to('.homehero-label.bottom', {
     y: '100%',
     opacity: 0.2,
     duration: 0.5
-  }, 0); // Start at 0s
+  }, .7); // Start at 0s
 
-  // Step 3: Set .homeHero-label.middle to 100% opacity (starts 0.3s after start)
-  heroTimeline.to('.homehero-label.middle', {
-    opacity: 1,
-    duration: 0.5
-  }, 0);
+  
 
-  // Step 4: Set .homeHero-name to 0% opacity (starts 0.3s after start)
-  heroTimeline.to('.homehero-name', {
-    opacity: 0,
-    duration: 0.5
-  }, 0);
+
 
   // Set up ScrollTrigger to play the timeline when .layoutContainer_hero top crosses -5% viewport
   ScrollTrigger.create({
