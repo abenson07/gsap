@@ -33,13 +33,13 @@ window.addEventListener('load', function () {
   heroTimeline.to('.homehero-label.middle', {
     opacity: 1,
     duration: 0.5
-  }, 0.3);
+  }, 0);
 
   // Step 4: Set .homeHero-name to 0% opacity (starts 0.3s after start)
   heroTimeline.to('.homehero-name', {
     opacity: 0,
     duration: 0.5
-  }, 0.5);
+  }, 0);
 
   // Set up ScrollTrigger to play the timeline when .layoutContainer_hero top crosses -5% viewport
   ScrollTrigger.create({
